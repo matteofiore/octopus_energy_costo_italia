@@ -1,1 +1,1 @@
-DOMAIN = "octopus_energyIT"
+DOMAIN = "octopus_energy"

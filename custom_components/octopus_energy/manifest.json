@@ -1,5 +1,5 @@
 {
-  "domain": "octopus_energyIT",
+  "domain": "octopus_energy",
   "name": "Octopus Energy Prices",
   "version": "1.0.0",
   "requirements": ["beautifulsoup4"],
