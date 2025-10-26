@@ -1,0 +1,8 @@
+{
+  "domain": "octopus_energy",
+  "name": "Octopus Energy Prices",
+  "version": "1.0",
+  "requirements": ["beautifulsoup4"],
+  "dependencies": [],
+  "codeowners": []
+}
