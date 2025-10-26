@@ -4,6 +4,9 @@ import functools
 import subprocess
 from bs4 import BeautifulSoup
 import logging
+from datetime import timedelta
+
+SCAN_INTERVAL = timedelta(minutes=15)  # aggiorna ogni 15 minuti
 
 _LOGGER = logging.getLogger(__name__)
 
