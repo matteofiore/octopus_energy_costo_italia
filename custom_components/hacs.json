@@ -1,11 +1,6 @@
 {
-  "name": "Energy Octopus price",
+  "name": "Octopus Energy Price Italy",
   "content_in_root": false,
-  "appdaemon": false,
-  "python_script": false,
-  "plugin": false,
-  "theme": false,
   "integration": true,
-  "after_dependencies": [],
   "domains": ["sensor"]
 }
