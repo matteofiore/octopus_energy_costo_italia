@@ -1,27 +1,32 @@
 import voluptuous as vol
 from homeassistant import config_entries
-from homeassistant.core import HomeAssistant
 from .const import DOMAIN
 
-# Schema per il form di configurazione
 STEP_USER_DATA_SCHEMA = vol.Schema({
     vol.Optional("name", default="Octopus Energy"): str,
+    vol.Optional("update_interval"): vol.All(int, vol.Range(min=1, max=1440)),
 })
 
 class OctopusEnergyFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
-    """Gestione del Config Flow per Octopus Energy."""
+    """Config flow for Octopus Energy."""
 
     VERSION = 1
 
     async def async_step_user(self, user_input=None):
-        """Step iniziale per la configurazione dall’UI."""
         errors = {}
 
         if user_input is not None:
-            # Qui puoi salvare eventuali dati o token se servono
+            # Se l'utente non inserisce update_interval, lo rimuoviamo
+            update_interval = user_input.get("update_interval")
+            data = {
+                "name": user_input.get("name", "Octopus Energy"),
+            }
+            if update_interval:
+                data["update_interval"] = update_interval
+
             return self.async_create_entry(
-                title=user_input.get("name", "Octopus Energy"),
-                data=user_input,
+                title=data["name"],
+                data=data,
             )
 
         return self.async_show_form(
