@@ -1,5 +1,5 @@
 from homeassistant.components.sensor import SensorEntity
-from .const import DOMAIN
+from .Octopus_energy_price_italy.const import DOMAIN
 import functools
 import subprocess
 from bs4 import BeautifulSoup

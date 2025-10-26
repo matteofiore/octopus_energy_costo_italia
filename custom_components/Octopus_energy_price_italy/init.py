@@ -1,6 +1,6 @@
 from homeassistant.core import HomeAssistant
 from homeassistant.config_entries import ConfigEntry
-from .const import DOMAIN
+from .Octopus_energy_price_italy.const import DOMAIN
 
 async def async_setup(hass: HomeAssistant, config: dict):
     """Set up the Octopus Energy component via configuration.yaml (optional)."""
